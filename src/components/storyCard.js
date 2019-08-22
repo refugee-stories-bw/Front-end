@@ -14,7 +14,7 @@ export default function StoryCard(props) {
       
 
     <Card
-      image={props.imageurl}
+      image={props.img}
       header={props.title}
       meta={props.name}
       description={props.story}
