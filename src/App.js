@@ -3,6 +3,8 @@ import logo from './logo.svg';
 import './App.css';
 import StoryList from './components/storyList';
 
+import 'semantic-ui-css/semantic.min.css';
+
 function App() {
   return (
     <div className="App">
