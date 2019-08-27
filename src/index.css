@@ -1,13 +1,35 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Merriweather', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #293462;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: ''Merriweather'', serif;
+}
+
+.card {font-family: 'Merriweather', serif;
+ letter-spacing: .5px;
+ line-height: 1.1;
+ text-align: left;
+ background-color: #00818A;
+
+}
+
+.card .meta {
+ background-color: #00818A;
+ text-align: center;
+}
+
+.card .description {
+ background-color: #00818A;
+ padding: 0;
+}
+
+.card .header {
+background-color: #216583;
+text-align: center; 
+ font-family: 'Merriweather', serif
 }
