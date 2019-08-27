@@ -12,7 +12,7 @@ export default function StoryCard(props) {
 
     return (
       
-
+      
     <Card
       image={props.img}
       header={props.title}

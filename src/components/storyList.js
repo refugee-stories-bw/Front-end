@@ -14,17 +14,18 @@ export default function StoryList(props) {
   // end testing
 
 
-  // const [stories, setStories] = useState([]);
+  //const [stories, setStories] = useState([]);
   
   // testing 
-  console.log(data);
+  //console.log(data);
   //end testing
 
-  /*useEffect(() => {
+  /* useEffect(() => {
     axios
-    .get("https://refugee-stories-backend-bw.herokuapp.com/stories")
+    .get("https://refugee-stories-pt.herokuapp.com/submissions")
     .then(response => {
-      setStories(data);
+      console.log(response);
+      setStories(response);
          })
     .catch(error => {
       console.log("error", error);

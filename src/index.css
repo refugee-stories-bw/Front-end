@@ -15,21 +15,46 @@ code {
  line-height: 1.1;
  text-align: left;
  background-color: #00818A;
+ border-radius: 5px !important;padding: 0;
+ }
 
-}
+ .card .image {font-family: 'Merriweather', serif;
+  letter-spacing: .5px;
+  line-height: 1.1;
+  text-align: left;
+  background-color: #00818A;
+  }
+
+.card .content {
+  font-family: 'Merriweather', serif;
+    letter-spacing: .5px;
+    line-height: 1.1;
+    text-align: left;
+    background-color: #00818A;
+    
+    
+    
+    }
 
 .card .meta {
  background-color: #00818A;
  text-align: center;
+ padding: 0;
+ color: #F7BE16 !important;
+ border-radius: 5px;
+ border-color: #F7BE16;
 }
 
 .card .description {
  background-color: #00818A;
  padding: 0;
+ margin: 0;
 }
 
 .card .header {
 background-color: #216583;
 text-align: center; 
- font-family: 'Merriweather', serif
+ font-family: 'Merriweather', serif !important;
+ padding: 0;
+ border-radius: 15px;
 }
