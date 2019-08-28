@@ -238,3 +238,9 @@ button.outline {
   border: 1px solid #aaa;
   color: #555;
 }
+
+.grid-view {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
