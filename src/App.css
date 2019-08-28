@@ -5,7 +5,7 @@
 #root,
 html,
 body {
-  height: 100%;
+  /* height: 100%; */
   margin: 0;
   padding: 0;
 }
@@ -75,13 +75,15 @@ body {
 }
 
 .App {
-  margin: 10px 100px;
+  margin: 30px 150px;
+  /* height: 50px; */
   display: flex;
+  /* align-items: center; */
 }
 
 .user-form {
   width: 700px;
-  height: 500px;
+  height: 450px;
   /* margin-left: auto; */
   margin: 100px;
   padding: 10px;
@@ -92,7 +94,7 @@ body {
 
 .register-form {
   width: 700px;
-  height: 600px;
+  height: 450px;
   margin-right: 100px;
   margin: auto 100px;
   padding: 10px;
