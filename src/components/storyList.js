@@ -3,29 +3,14 @@ import axios from "axios";
 import StoryCard from "./storyCard";
 import "semantic-ui-css/semantic.min.css";
 
-// testing  
-//import data from './data.js';
-// testing
-import data from "./data.js";
-// end testing
 
 export default function StoryList(props) {
-  // testing
-  //const stories = data;
-  // end testing
+ 
 
 
    const [stories, setStories] = useState([]);
   
-  // testing 
-  //console.log(data);
-  // const [stories, setStories] = useState([]);
-
-  // testing
-  console.log(data);
-  //end testing
-
-  useEffect(() => {
+   useEffect(() => {
     axios
     .get("https://refugee-stories-backend-1.herokuapp.com/stories")
     .then(response => {
