@@ -84,12 +84,13 @@ const StoryForm = ({ errors, touched, values, status }) => {
 };
 
 const formikHOC = withFormik({
-  mapPropsToValues({ name, photo, title, story }) {
+  mapPropsToValues({ name, imageurl, title, story, isapproved }) {
     return {
       name: name || "",
-      photo: photo || "",
+      imageurl: imageurl || "",
       title: title || "",
-      story: story || false
+      story: story || "",
+      isapproved: isapproved || false,
     };
   },
   // validationSchema: Yup.object().shape({
