@@ -244,3 +244,21 @@ button.outline {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
+
+/* begin story styling bootleg !important overrides of semantic-ui */
+.card {
+  font-family: Merriweather !important;
+}
+
+.card .content {
+  background-color: #00818A !important;
+}
+
+.card .meta {
+  color: #F7BE16 !important;
+}
+
+.card .extra {
+background-color: #216583 !important;
+color: #293462 !important;
+}

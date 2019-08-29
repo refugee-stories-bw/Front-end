@@ -7,19 +7,15 @@ import AppRouter from "./components/AppRouter";
 // import SignupForm from "./SignupForm"
 import StoryList from './components/storyList';
 import 'semantic-ui-css/semantic.min.css';
+import data from "./components/data";
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <AppRouter />
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        < StoryList />
-      </header>
-    </div>
+      <StoryList />
+     </div>
+     
   );
 }
 

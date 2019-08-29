@@ -1,6 +1,6 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import LoginFormik from "./Login";
+import LoginFormik from "./login";
 import stories from "./stories";
 import SignupForm from "./SignupForm";
 
