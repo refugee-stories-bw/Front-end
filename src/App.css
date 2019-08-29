@@ -257,6 +257,8 @@ button.outline {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-image: url(./pics/man-1002633_960_720.jpg);
+  background-image: cover;
 }
 
 /* begin story styling bootleg !important overrides of semantic-ui */
