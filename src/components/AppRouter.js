@@ -11,16 +11,21 @@ const AppRouter = () => {
     <>
       {/* <div className="NavStyle"> */}
       <Route path="/" exact component={TabNav} />
+      
       {/* </div> */}
       <div className="FormBody">
         <Route path="/stories" exact component={TabNav} />
         <Route path="/" exact component={LoginFormik} />
         <Route path="/" exact component={SignupForm} />
+        
       </div>
       <Route path="/submitStory" exact component={TabNav} />
       <div className="FormSubBody">
         <Route path="/submitStory" exact component={stories} />
-        <Route path="/storyList" exact component={storyList} />
+      </div>
+      <div>
+      <Route path="/storylist" exact component={TabNav} />
+      <Route path="/storyList" exact component={storyList} />
       </div>
     </>
   );
