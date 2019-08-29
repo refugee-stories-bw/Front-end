@@ -2,13 +2,28 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
+import login from "./components/login";
+import submitStories from "./components/submitStory";
 import * as serviceWorker from "./serviceWorker";
-import { BrowserRouter as Router } from "react-router-dom";
+import { ProtectedRoute } from "./components/protected.route";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+
+// function App() {
+//   return (
+//     <div className="App">
+//       <Switch>
+//         <Route exact path="/" component={login} />
+//         <ProtectedRoute exact path="/submitStory" component={submitStories} />
+//         <Route path="*" component={() => "404 NOT FOUND"} />
+//       </Switch>
+//     </div>
+//   );
+// }
 
 ReactDOM.render(
-  <Router>
+  <BrowserRouter>
     <App />
-  </Router>,
+  </BrowserRouter>,
   document.getElementById("root")
 );
 
