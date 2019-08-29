@@ -7,15 +7,14 @@ import AppRouter from "./components/AppRouter";
 // import SignupForm from "./SignupForm"
 import StoryList from './components/storyList';
 import 'semantic-ui-css/semantic.min.css';
-import data from "./components/data";
+//import data from "./components/data";
+
 
 function App() {
   return (
     <div>
-      <AppRouter />
       <StoryList />
-     </div>
-     
+    </div>
   );
 }
 

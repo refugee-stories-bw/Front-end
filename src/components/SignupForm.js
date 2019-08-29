@@ -72,7 +72,7 @@ const formikHOC = withFormik({
 
   handleSubmit(values, { setStatus, resetForm }) {
     axios
-      .post("https://refugee-stories-backend-bw.herokuapp.com/signup", values)
+      .post("https://refugee-stories-backend-1.herokuapp.com/signup", values)
       .then(res => {
         console.log("handleSubmit: then: res: ", res);
         setStatus(res.data);

@@ -1,8 +1,9 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import LoginFormik from "./login";
-import stories from "./stories";
+import stories from "./submitStory";
 import SignupForm from "./SignupForm";
+import storyList from "./storyList";
 
 const AppRouter = () => {
   return (
@@ -12,12 +13,11 @@ const AppRouter = () => {
       <Route path="/" exact component={SignupForm} />
       {/* </div> */}
       <div className="Story">
-        <Route path="/stories" exact component={stories} />
+        <Route path="/submitStory" exact component={stories} />
+        <Route path="/storyList" exact component={storyList} />
       </div>
     </>
   );
 };
 
 export default AppRouter;
-
-//Hello!
