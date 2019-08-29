@@ -5,8 +5,7 @@ import App from "./App";
 import login from "./components/login";
 import submitStories from "./components/submitStory";
 import * as serviceWorker from "./serviceWorker";
-import { ProtectedRoute } from "./components/protected.route";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 
 // function App() {
 //   return (

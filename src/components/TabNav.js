@@ -26,6 +26,9 @@ export default function TabNav() {
         margin: 10px 0;
       `}
     >
+      <NavLink className={NavButton} to="/stories">
+        Home Page
+      </NavLink>
       <NavLink className={NavButton} to="/">
         Login/Sign Up Page
       </NavLink>
