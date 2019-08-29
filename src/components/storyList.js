@@ -3,32 +3,23 @@ import axios from "axios";
 import StoryCard from "./storyCard";
 import "semantic-ui-css/semantic.min.css";
 
-// testing
-import data from "./data.js";
-// end testing
 
 export default function StoryList(props) {
-  // testing
-  const stories = data;
-  // end testing
+ 
 
-  // const [stories, setStories] = useState([]);
 
-  // testing
-  console.log(data);
-  //end testing
-
-  /*useEffect(() => {
+   const [stories, setStories] = useState([]);
+  
+   useEffect(() => {
     axios
-    .get("https://refugee-stories-backend-bw.herokuapp.com/stories")
+    .get("https://refugee-stories-backend-1.herokuapp.com/stories")
     .then(response => {
-      setStories(data);
+      setStories(response.data);
          })
     .catch(error => {
       console.log("error", error);
     });
   }, []);
-  */
 
   return (
     <section className="character-list grid-view">

@@ -35,7 +35,7 @@ export default function TabNav() {
       <NavLink className={NavButton} to="/submitStory">
         Submit a Story
       </NavLink>
-      <NavLink className={NavButton} to="/stories">
+      <NavLink className={NavButton} to="/storyList">
         Stories List
       </NavLink>
     </nav>

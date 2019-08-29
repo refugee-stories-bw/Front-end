@@ -257,4 +257,24 @@ button.outline {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  background-image: url(./pics/man-1002633_960_720.jpg);
+  background-image: cover;
+}
+
+/* begin story styling bootleg !important overrides of semantic-ui */
+.card {
+  font-family: Merriweather !important;
+}
+
+.card .content {
+  background-color: #00818A !important;
+}
+
+.card .meta {
+  color: #F7BE16 !important;
+}
+
+.card .extra {
+background-color: #216583 !important;
+color: #293462 !important;
 }
