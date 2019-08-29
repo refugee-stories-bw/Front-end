@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-// import logo from "./logo.svg";
+import logo from "./logo.svg";
 import "./App.css";
 import AppRouter from "./components/AppRouter";
 // import LoginFormik from "./login";
 // import SignupForm from "./SignupForm"
-import StoryList from './components/storyList';
-import 'semantic-ui-css/semantic.min.css';
+import StoryList from "./components/storyList";
+import "semantic-ui-css/semantic.min.css";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        < StoryList />
+        <StoryList />
       </header>
     </div>
   );
