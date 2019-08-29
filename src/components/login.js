@@ -24,12 +24,22 @@ const Login = ({ errors, touched, values, status }) => {
       <Form>
         <h1 className="header"> Login to submit a story or --> </h1>
         <label className="text-container">User Name</label>
-        <Field component="input" type="text" name="username" />
+        <Field
+          component="input"
+          type="text"
+          name="username"
+          placeholder="User Name"
+        />
         {touched.username && errors.username && (
           <p className="error">{errors.username}</p>
         )}
         <label className="text-container">Password</label>
-        <Field component="input" type="password" name="password" />
+        <Field
+          component="input"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
         {touched.password && errors.password && (
           <p className="error">{errors.password}</p>
         )}
@@ -39,7 +49,10 @@ const Login = ({ errors, touched, values, status }) => {
           <Field type="checkbox" name="admin" checked={values.admin} />
           <span className="checkmark" />
         </label>
-        <button type="submit">Login</button>
+
+        <button className="SignUpButton" type="submit">
+          Login
+        </button>
       </Form>
       {users.map(user => (
         <p key={user.id}>{user.name}</p>

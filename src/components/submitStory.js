@@ -5,6 +5,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import { NavLink } from "react-router-dom";
 import { render } from "react-dom";
+// import styled from "styled-components";
 
 const StoryForm = ({ errors, touched, values, status }) => {
   const [users, setUsers] = useState([]);
@@ -41,13 +42,8 @@ const StoryForm = ({ errors, touched, values, status }) => {
 
         {touched.name && errors.name && <p className="error">{errors.name}</p>}
         <label className="text-container">Photo</label>
-        {/* <Field
-          component="input"
-          type="text"
-          name="photo"
-          placeholder="Photo Title"
-        /> */}
-        <button>Attach</button>
+
+        <button className="SignUpButton">Attach</button>
         {touched.photo && errors.photo && (
           <p className="error">{errors.photo}</p>
         )}
@@ -65,17 +61,19 @@ const StoryForm = ({ errors, touched, values, status }) => {
         <Field
           component="textarea"
           type="text"
-          name="notes"
+          name="story"
           placeholder="Story"
         />
-        {touched.notes && errors.notes && (
-          <p className="error">{errors.notes}</p>
+        {touched.story && errors.story && (
+          <p className="error">{errors.story}</p>
         )}
 
-        <button type="submit">Submit!</button>
+        <button className="SignUpButton" type="submit">
+          Submit!
+        </button>
 
         <NavLink to="/">
-          <button>Back</button>
+          <button className="SignUpButton">Back</button>
         </NavLink>
       </Form>
       {users.map(user => (
@@ -108,6 +106,7 @@ const formikHOC = withFormik({
       .then(res => {
         console.log("handleSubmit: then: res: ", res);
         setStatus(res.data);
+        localStorage.setItem("token", res.data.token);
         resetForm();
       })
       .catch(err => console.error("handleSubmit: catch: err: ", err));
@@ -117,48 +116,7 @@ const OnboardingFormWithFormik = formikHOC(StoryForm);
 
 export default OnboardingFormWithFormik;
 
-const styles = {
-  fontFamily: "sans-serif",
-  textAlign: "center",
-  display: "flex"
-};
-
-class App extends React.Component {
-  constructor() {
-    super();
-    this.onChange = this.onChange.bind(this);
-    this.state = {
-      files: []
-    };
-  }
-
-  onChange(e) {
-    var files = e.target.files;
-    console.log(files);
-    var filesArr = Array.prototype.slice.call(files);
-    console.log(filesArr);
-    this.setState({ files: [...this.state.files, ...filesArr] });
-  }
-
-  removeFile(f) {
-    this.setState({ files: this.state.files.filter(x => x !== f) });
-  }
-
-  render() {
-    return (
-      <div style={styles}>
-        <label className="custom-file-upload">
-          <input type="file" multiple onChange={this.onChange} />
-          <i className="fa fa-cloud-upload" /> Attach
-        </label>
-        {this.state.files.map(x => (
-          <div className="file-preview" onClick={this.removeFile.bind(this, x)}>
-            {x.name}
-          </div>
-        ))}
-      </div>
-    );
-  }
-}
-
-render(<App />, document.getElementById("root"));
+// const token = localStorage.getItem("token");
+// axios.post("https://disney-parents-buddy.herokuapp.com/api/posts", post, {
+//   headers: { Authorization: token }
+// });
