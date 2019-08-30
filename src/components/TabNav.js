@@ -26,9 +26,9 @@ export default function TabNav() {
         margin: 10px 0;
       `}
     >
-      <NavLink className={NavButton} to="/stories">
-        Home Page
-      </NavLink>
+      <button className={NavButton}>
+        <a href="https://refugee-stories-marketing.netlify.com">Home Page</a>
+      </button>
       <NavLink className={NavButton} to="/">
         Login/Sign Up Page
       </NavLink>

@@ -4,7 +4,7 @@ import * as Yup from "yup";
 import axios from "axios";
 import "semantic-ui-css/semantic.min.css";
 
-const SignupForm = ({ errors, touched, values, status }) => {
+const SignupForm = ({ errors, touched, status }) => {
   const [users, setUsers] = useState([]);
   console.log(users);
 

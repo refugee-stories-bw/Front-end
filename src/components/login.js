@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Field, withFormik } from "formik";
-// import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import { FacebookLoginButton } from "react-social-login-buttons";
-import * as Yup from "yup";
 import axios from "axios";
-// import { Link } from "react-router-dom";
 
 const Login = ({ errors, touched, values, status }) => {
   const [users, setUsers] = useState([]);
@@ -15,9 +11,6 @@ const Login = ({ errors, touched, values, status }) => {
       setUsers([...users, status]);
     }
   }, [status]);
-
-  //   )
-  // };
 
   return (
     <div className="user-form">
