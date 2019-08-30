@@ -43,9 +43,8 @@ const Login = ({ errors, touched, values, status }) => {
           <span className="checkmark" />
         </label>
 
-        <button className="SignUpButton" type="submit">
-          Login
-        </button>
+          <Link to="/submitStory"><button className="SignUpButton" type="submit">Login</button></Link>
+          
       </Form>
       {users.map(user => (
         <p key={user.id}>{user.name}</p>
