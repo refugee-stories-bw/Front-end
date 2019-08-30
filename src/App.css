@@ -95,7 +95,7 @@ html {
 /* } */
 
 .user-form {
-  width: 700px;
+  width: 450px;
   height: 400px;
   margin-left: auto;
   margin: 100px;
@@ -106,7 +106,7 @@ html {
 }
 
 .register-form {
-  width: 700px;
+  width: 450px;
   height: 400px;
   margin-right: 100px;
   margin: auto 100px;
