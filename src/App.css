@@ -16,6 +16,7 @@ html {
   line-height: 1.5;
   color: #24292e;
   background-image: url(./pics/man-1002633_960_720.jpg);
+  background-image: cover;
   background-color: #cccccc;
   background-position: center;
   background-repeat: no-repeat;
