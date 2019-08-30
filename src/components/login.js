@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Form, Field, withFormik } from "formik";
-// import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import { FacebookLoginButton } from "react-social-login-buttons";
-import * as Yup from "yup";
 import axios from "axios";
-// import { Link } from "react-router-dom";
 
 const Login = ({ errors, touched, values, status }) => {
   const [users, setUsers] = useState([]);
@@ -16,20 +12,27 @@ const Login = ({ errors, touched, values, status }) => {
     }
   }, [status]);
 
-  //   )
-  // };
-
   return (
     <div className="user-form">
       <Form>
         <h1 className="header"> Login to submit a story or --> </h1>
         <label className="text-container">User Name</label>
-        <Field component="input" type="text" name="username" />
+        <Field
+          component="input"
+          type="text"
+          name="username"
+          placeholder="User Name"
+        />
         {touched.username && errors.username && (
           <p className="error">{errors.username}</p>
         )}
         <label className="text-container">Password</label>
-        <Field component="input" type="password" name="password" />
+        <Field
+          component="input"
+          type="password"
+          name="password"
+          placeholder="Password"
+        />
         {touched.password && errors.password && (
           <p className="error">{errors.password}</p>
         )}
@@ -39,7 +42,10 @@ const Login = ({ errors, touched, values, status }) => {
           <Field type="checkbox" name="admin" checked={values.admin} />
           <span className="checkmark" />
         </label>
-        <button type="submit">Login</button>
+
+        <button className="SignUpButton" type="submit">
+          Login
+        </button>
       </Form>
       {users.map(user => (
         <p key={user.id}>{user.name}</p>
@@ -61,7 +67,7 @@ const formikHOC = withFormik({
   // }),
   handleSubmit(values, { setStatus, resetForm }) {
     axios
-      .post("https://refugee-stories-backend-bw.herokuapp.com/login", values)
+      .post("https://refugee-stories-backend-1.herokuapp.com/login", values)
       .then(res => {
         console.log("handleSubmit: then: res: ", res);
         setStatus(res.data);

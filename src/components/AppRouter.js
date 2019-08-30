@@ -1,23 +1,34 @@
 import React from "react";
 import { Route } from "react-router-dom";
-import LoginFormik from "./Login";
-import stories from "./stories";
+import LoginFormik from "./login";
+import stories from "./submitStory";
 import SignupForm from "./SignupForm";
+import storyList from "./storyList";
+import TabNav from "./TabNav";
 
 const AppRouter = () => {
   return (
     <>
-      {/* <div className="Welcome"> */}
-      <Route path="/" exact component={LoginFormik} />
-      <Route path="/" exact component={SignupForm} />
+      {/* <div className="NavStyle"> */}
+      <Route path="/" exact component={TabNav} />
+      
       {/* </div> */}
-      <div className="Story">
-        <Route path="/stories" exact component={stories} />
+      <div className="FormBody">
+        <Route path="/stories" exact component={TabNav} />
+        <Route path="/" exact component={LoginFormik} />
+        <Route path="/" exact component={SignupForm} />
+        
+      </div>
+      <Route path="/submitStory" exact component={TabNav} />
+      <div className="FormSubBody">
+        <Route path="/submitStory" exact component={stories} />
+      </div>
+      <div>
+      <Route path="/storylist" exact component={TabNav} />
+      <Route path="/storyList" exact component={storyList} />
       </div>
     </>
   );
 };
 
 export default AppRouter;
-
-//Hello!
