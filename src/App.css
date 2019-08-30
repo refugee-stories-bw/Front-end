@@ -9,7 +9,7 @@ html {
   padding: 0;
 }
 
-/* .FormBody {
+.FormBody {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
     sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
   font-size: 14px;
@@ -23,7 +23,7 @@ html {
   display: flex;
   height: 100%;
   align-items: center;
-} */
+}
 
 .FormSubBody {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
